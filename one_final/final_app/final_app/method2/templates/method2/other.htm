@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>他のユーザーの情報</title>
+    <link rel="stylesheet" href="{% static 'method2/sample.css' %}">
+</head>
+<body>
+    <header><div id="header-container"><div id="head-inner"><font size="20" color="white"><img src="{% static 'method2/S__27017222_0.png' %}" width="60" height="70">
+        <b>KITinder</b></font>
+    
+    
+    <p class="description">〜工大生向けのマッチング掲示板〜</p></div></div>
+    </header>
+    <h1>他のユーザーの情報</h1>
+    {% for user in users %}
+    <h2>{{user.username}}</h2>
+    <p>連絡先：{{user.email}}</p>
+    {% endfor %}
+</body>
+
+</html>

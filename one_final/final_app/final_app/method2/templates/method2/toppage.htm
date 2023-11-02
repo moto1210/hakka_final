@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="{% static 'method2/favicon.ico' %}">
+<title>KITinder〜工大生向けのマッチング掲示板〜</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'method2/sample.css' %}">
+</head>
+<body>
+<div id="outer">
+<header><div id="header-container"><div id="head-inner"><font size="20" color="white"><img src="{% static 'method2/S__27017222_0.png' %}" width="60" height="70">
+    <b>KITinder</b></font>
+
+
+<p class="description">〜工大生向けのマッチング掲示板〜</p></div></div>
+</header>
+<div id="content-wrapper">
+<main>
+<div id="inner">
+<h2>掲示板</h2>
+<h3>匿名でチャットができるサービスです。好きなことを呟きましょう。</h3>
+
+<a href="http://127.0.0.1:8000/index_1" class="btn_1">掲示板へ飛ぶ</a> <!--追加記述-->
+<br>
+<br>
+<h2>一緒に勉強</h2>
+<h3>興味のある分野が同じ人とマッチングするサービスです。マッチングした人と一緒に勉強しましょう。</h3>
+<a href="sub2.htm" class="btn_2">興味のある分野を選択する</a>
+<br>
+<br>
+<h2>先輩に質問</h2>
+<h3>先輩に質問ができます。先輩に質問して良い情報を得ましょう！</h3><!--追加記述-->
+<a href="http://127.0.0.1:8000/index" class="btn_3">質問フォームへ飛ぶ</a>
+</div>
+</main>
+<br>
+<br>
+<footer>© 2023 KITinder</footer>
+</div></body>
+</html>

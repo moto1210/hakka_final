@@ -1,0 +1,294 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "游ゴシック Medium", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+	line-height: 1.6;
+    font-size: 16px;
+}
+#header-container {
+  margin: 0 auto;
+  width: 694px;
+}
+header {
+	background-color: hsl(315, 81%, 46%);
+}
+#head-inner {
+    padding: 25px 0;
+}
+h1 {
+	font-size: 80spx;
+	font-weight: bold;
+	padding: 10px 0 0 0;
+	margin: 0;
+	color: #f3e6d2;
+}
+h1 a {
+	font-weight: bold;
+	color: #f3e6d2;
+	text-decoration: none;
+}
+h1 a:hover {
+	color: #e8f3f9;
+	text-decoration: none;
+}
+.description {
+	line-height: 1.2;
+	color: #f3f2eb;
+	margin: 0.5em 0 1em 0;
+}
+h2 {
+	font-size: 25px;
+	margin: 0;
+	padding: 4px 0;
+	border-bottom: 1px solid #999;
+}
+#content-wrapper {margin: 0 auto;
+    width: 694px;}
+main {
+	color: #333;
+}
+#inner {
+	padding: 20px 0 0 0;
+}
+ul {
+	margin: 0 0 0 1em;
+	padding: 0;
+}
+li {
+	list-style: disc;
+}
+p {
+	margin: 1em 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+hr {
+	border-width: 1px 0 0 0;
+	border-style: solid;
+	border-color: #ccc;
+	height: 1px;
+}
+a {
+	font-weight: normal;
+}
+
+#middle-inner {
+	padding: 20px 0 20px 0;
+}
+.side-title {
+	padding: 7px 16px 7px 16px;
+	background-color: #f1f1f1;
+	color: #333;
+	font-weight: bold;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
+.side {
+	margin: 0 0 10px 0;
+	padding: 2px 8px 8px 7px;
+	background-color: #fcfcfc;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+.side ul {
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+.side li {
+	list-style: none;
+	margin-bottom: 0.5em;
+}
+.side li a {
+	text-decoration: none;
+	color: #214555;
+}
+.side li a:hover {
+	text-decoration: underline;
+}
+footer {
+	font-size: 15px;
+	height: 100px;
+	clear: both;
+	text-align: center;
+}
+blockquote {
+	border: 1px solid #ccc;
+	padding: 5px;
+	margin: 10px;
+}
+@media screen and (max-width: 767px) {
+#header-container {
+    margin: 0;
+	width: 100%;
+}
+#head-inner {
+    padding: 25px 10px;
+	background-color: hsl(315, 81%, 46%);
+}
+#content-wrapper {
+margin: 0;
+	width: 100%;}
+main {
+width: 100%;
+	color: #333;
+}
+#inner {
+	padding: 20px 10px 0 10px;
+}
+aside {
+width: 100%;
+}
+#middle-inner {
+	padding: 10px 10px 20px 10px;
+}
+h1 {
+	font-size: 20px;
+}
+h2 {
+	font-size: 30px;
+}
+h3 {
+	font-size: 20px;
+}
+h4 {
+	font-size: 14px;
+}
+}
+
+.btn_1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    padding: 1em 2em;
+    overflow: hidden;
+    border: none;
+    border-radius: 5px;
+    background-color: #e70da2;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.btn_1::before {
+    display: block;
+    position: absolute;
+    top: -50%;
+    left: -30%;
+    transform: rotate(30deg);
+    width: 70px;
+    height: 100px;
+    content: '';
+    background-image: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
+    animation: animation-button-010 2s infinite linear;
+}
+
+@keyframes animation-button-010 {
+    17% {
+        left: 120%;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+.btn_1:hover {
+    background-color: #d70092;
+}
+
+
+.btn_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    padding: 1em 2em;
+    overflow: hidden;
+    border: none;
+    border-radius: 5px;
+    background-color: #e70da2;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.btn_2::before {
+    display: block;
+    position: absolute;
+    top: -50%;
+    left: -30%;
+    transform: rotate(30deg);
+    width: 70px;
+    height: 100px;
+    content: '';
+    background-image: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
+    animation: animation-button-010 2s infinite linear;
+}
+
+@keyframes animation-button-010 {
+    17% {
+        left: 120%;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+.btn_2:hover {
+    background-color: #d70092;
+}
+
+.btn_3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+    padding: 1em 2em;
+    overflow: hidden;
+    border: none;
+    border-radius: 5px;
+    background-color: #e70da2;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.btn_3::before {
+    display: block;
+    position: absolute;
+    top: -50%;
+    left: -30%;
+    transform: rotate(30deg);
+    width: 70px;
+    height: 100px;
+    content: '';
+    background-image: linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
+    animation: animation-button-010 2s infinite linear;
+}
+
+@keyframes animation-button-010 {
+    17% {
+        left: 120%;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+.btn_3:hover {
+    background-color: #d70092;
+}

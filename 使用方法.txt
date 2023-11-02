@@ -1,0 +1,77 @@
+１，hase_finalをrunserver8001で立てる
+２，osuke_finalをrunserverで立てる
+３，http://127.0.0.1:8000/accounts/login/
+
+class CreateView_1(LoginRequiredMixin, generic.CreateView):
+    form_class = PostForm_1
+    success_url = reverse_lazy('timeline:index_1')
+    def form_valid(self, form):
+        form.instance.author_id = self.request.user.id
+        messages.success(self.request, '投稿が完了しました。')
+        return super(CreateView_1, self).form_valid(form)
+    def form_invalid(self, form):
+        messages.warning(self.request, '投稿が失敗しました。')
+        return redirect('timeline:index_1')
+
+create_1 = CreateView_1.as_view()
+
+class DeleteView_1(LoginRequiredMixin, generic.DeleteView):
+    model = Post_1
+    success_url = reverse_lazy('timeline:index_1')
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.author == request.user:
+            messages.success(self.request, '削除しました。')
+            return super().delete(request, *args, **kwargs)
+
+delete_1 = DeleteView_1.as_view()
+
+class LikeView_1(LoginRequiredMixin, generic.View):
+    model = Like_1
+    def post(self, request):
+        post_id = request.POST.get('id')
+        post = Post_1.objects.get(id=post_id)
+        like_item = Like(user=self.request.user, post=post)
+        like_item.save()
+        like_count = Like.objects.filter(post=post).count()
+        data = {'message': 'いいねしました', 'like_count': like_count}
+        return JsonResponse(data)
+
+like_1 = LikeView_1.as_view()
+
+class CreateView_1(LoginRequiredMixin, generic.CreateView):
+    form_class = PostForm_1
+    success_url = reverse_lazy('timeline:index_1')
+    def form_valid(self, form):
+        form.instance.author_id = self.request.user.id
+        messages.success(self.request, '投稿が完了しました。')
+        return super(CreateView_1, self).form_valid(form)
+    def form_invalid(self, form):
+        messages.warning(self.request, '投稿が失敗しました。')
+        return redirect('timeline:index_1')
+
+create_1 = CreateView_1.as_view()
+
+class DeleteView_1(LoginRequiredMixin, generic.DeleteView):
+    model = Post_1
+    success_url = reverse_lazy('timeline:index_1')
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        if self.object.author == request.user:
+            messages.success(self.request, '削除しました。')
+            return super().delete(request, *args, **kwargs)
+
+delete_1 = DeleteView_1.as_view()
+
+class LikeView_1(LoginRequiredMixin, generic.View):
+    model = Like_1
+    def post(self, request):
+        post_id = request.POST.get('id')
+        post = Post_1.objects.get(id=post_id)
+        like_item = Like(user=self.request.user, post=post)
+        like_item.save()
+        like_count = Like.objects.filter(post=post).count()
+        data = {'message': 'いいねしました', 'like_count': like_count}
+        return JsonResponse(data)
+
+like_1 = LikeView_1.as_view()

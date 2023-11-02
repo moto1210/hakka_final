@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="{% static 'method2/favicon.ico' %}">
+<title>KITinder〜工大生向けのマッチング掲示板〜</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'method2/sample.css' %}">
+</head>
+<body>
+<div id="outer">
+    <a href="{% url 'toppage' %}"><header><div id="header-container"><div id="head-inner"><font size="20" color="white"><img src="{% static 'method2/S__27017222_0.png' %}" width="60" height="70"></a>
+        <b>KITinder</b></font>
+
+
+<p class="description">〜工大生向けのマッチング掲示板〜</p></div></div>
+</header>
+
+<!-- チェックリスト -->
+
+<main>
+
+<form class="" action="{% url 'sub4' %}" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+
+<h2>プログラミング</h2>
+
+<label>
+ <input type="checkbox" name="subject" value="python" autofocus> python
+</label>
+<br>
+
+<label>
+  <input type="checkbox" name="subject" value="java"> java
+</label>
+<br>
+ 
+<label>
+  <input type="checkbox" name="subject" value="C言語"> C言語
+</label>
+<br>
+<br>
+<br>
+
+<h2>ウェブ系</h2>
+ <label>
+ <input type="checkbox" name="subject" value="Django" autofocus> Django
+</label>
+<br>
+
+<label>
+  <input type="checkbox" name="subject" value="html"> html
+</label>
+<br>
+
+<label>
+  <input type="checkbox" name="subject" value="css"> css
+</label>
+<br>
+<br>
+<br>
+
+<h2>アプリ開発</h2>
+<label>
+ <input type="checkbox" name="subject" value="Kotrin" autofocus> Kotlin
+</label>
+<br>
+
+<label>
+  <input type="checkbox" name="subject" value="Swift"> Swift
+</label>
+<br>
+ 
+<label>
+  <input type="checkbox" name="subject" value="Android Studio"> Android Studio
+</label>
+<br>
+<br>
+
+<input type="submit" name="button" value="送信">
+</form>
+
+</main>
